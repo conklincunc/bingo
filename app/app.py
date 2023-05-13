@@ -6,11 +6,11 @@ from datetime import datetime, timedelta
 #dbf = 'db.db'
 #engstr = f'sqlite:///{dbf}'
 # TODO: replace this with connection env vars
-db_user = os.environ.get('DB_USER')
-db_password = os.environ.get('DB_PASSWORD')
-db_host = os.environ.get('DB_HOST')
-db_port = os.environ.get('DB_PORT')
-db_name = os.environ.get('DB_NAME')
+db_user = os.environ.get('database-user')
+db_password = os.environ.get('database-password')
+db_host = os.environ.get('database-host')
+db_port = os.environ.get('database-port')
+db_name = os.environ.get('database-name')
 
 #engstr = 'postgresql://dbadba:fofofofo@10.10.10.10:5432/bingo'
 engstr = f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}'
