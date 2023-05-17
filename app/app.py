@@ -2,6 +2,7 @@ from flask import Flask, request
 from flask_restful import Api, Resource
 from models import db, Identity 
 from datetime import datetime, timedelta
+import os
 
 #dbf = 'db.db'
 #engstr = f'sqlite:///{dbf}'
