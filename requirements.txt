@@ -2,3 +2,4 @@ flask
 psycopg-binary
 requests
 flask_restful
+flask_sqlalchemy
