@@ -1,4 +1,6 @@
-FROM python:3
+#FROM python:3
+FROM registry.access.redhat.com/ubi9/python-39:1-108
+
 
 #Set the working directory
 WORKDIR /opt/app-root
