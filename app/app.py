@@ -2,6 +2,7 @@ from flask import Flask, request
 from flask_restful import Api, Resource
 from models import db, Identity 
 from datetime import datetime, timedelta
+import os
 
 #dbf = 'db.db'
 #engstr = f'sqlite:///{dbf}'
@@ -15,7 +16,7 @@ db_name = os.environ.get('database-name')
 #engstr = 'postgresql://dbadba:fofofofo@10.10.10.10:5432/bingo'
 engstr = f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}'
 
-
+print(f"DEBUG: Engine String is {engstr}")
 
 # settings from config.py
 app = Flask(__name__)

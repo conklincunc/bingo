@@ -1,5 +1,5 @@
 flask
-psycopg-binary
+psycopg
 requests
 flask_restful
 flask_sqlalchemy
