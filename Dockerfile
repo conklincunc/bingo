@@ -6,7 +6,9 @@ WORKDIR /opt/app-root
 #copy all the files
 COPY . .
 
-RUN pip --disable-pip-version-check install -r requirements.txt
+#RUN pip --disable-pip-version-check install -r requirements.txt
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 #Expose the required port
 EXPOSE 8080
 
