@@ -3,6 +3,8 @@ from flask_restful import Api, Resource
 from models import db, Identity 
 from datetime import datetime, timedelta
 import os
+import uuid
+import secrets
 
 #dbf = 'db.db'
 #engstr = f'sqlite:///{dbf}'
@@ -80,10 +82,11 @@ api.add_resource(IdentityView,'/identity/<string:uuid>', methods=['GET', 'DELETE
 # helper methods
 
 def GenerateUUID():
-    return ''
+    return uuid.uuid4().hex
 
 def GenerateKey():
-    return ''
+    return secrets.token_urlsafe(16)
+
 
 if __name__ == "__main__":
       app.run(host='0.0.0.0', debug=True, threaded=True, port=8080)
