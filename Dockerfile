@@ -14,4 +14,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8080
 
 #Run the command
-CMD ["python3", "./app/app.py"]
+CMD ["python3", "./app.py"]
