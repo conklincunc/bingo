@@ -82,7 +82,9 @@ api.add_resource(IdentityView,'/identity/<string:uuid>', methods=['GET', 'DELETE
 # helper methods
 
 def GenerateUUID():
-    return uuid.uuid4().hex
+    uuid = uuid.uuid4().hex
+    print(f'DEBUG uuid: {uuid})
+    return uuid
 
 def GenerateKey():
     return secrets.token_urlsafe(16)
