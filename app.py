@@ -1,6 +1,6 @@
 from flask import Flask, request
 from flask_restful import Api, Resource
-from models import db, Identity 
+from models import db, Identity
 from datetime import datetime, timedelta
 import os
 import uuid
@@ -46,7 +46,7 @@ class IdentitiesView(Resource):
         owner = data['owner']
         identity = Identity.query.filter_by(uuid=uuid).first()
         if identity:
-            return {'message':'Identity already exists in database'},404
+            return {'message':'Identity ??? already exists in database'},404
         new_identity = Identity(uuid, data['owner'], key)
 
         db.session.add(new_identity)
